@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+int i;
+double cibleTouche;
+
+
+int main()
+{
+    srand(time(NULL));
+
+    for(i=0; i<=pow(10, 7); i++) {
+        double pointX = (2.0 * rand() / RAND_MAX) - 1.0;
+        double pointY = (2.0 * rand() / RAND_MAX) - 1.0;
+        if(pow(pointX, 2) + pow(pointY, 2) <=1) {
+            cibleTouche++;
+        }
+    }
+    printf("Valeur de pi: %f", cibleTouche/pow(10,7)*4);
+    return 0;
+}

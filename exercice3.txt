@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+
+int nombre = 1;
+int result = 1;
+
+int main()
+{
+    printf("Veuillez saisir un nombre entier naturel (entre 1 et 12)\n");
+    scanf("%d", &nombre);
+    while (nombre <=0 || nombre > 12) {
+        printf("La saisie n'est pas correcte, veuillez resaisir\n");
+        scanf("%d", &nombre);
+    }
+    for(int i=1; i<= nombre; i++) {
+        result *= i;
+    }
+    printf("%d", result);
+}

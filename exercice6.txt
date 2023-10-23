@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+
+int nombreSaisie, nombreEtape = 1;
+int valeurMaximale = 0;
+
+int main()
+{
+    printf("Saisissez un entier naturel positif\n");
+    scanf("%d", &nombreSaisie);
+    valeurMaximale = nombreSaisie;
+    
+    while(nombreSaisie!=1) {
+        if(nombreSaisie%2==0) {
+            nombreSaisie/=2;
+        } else {
+            nombreSaisie = nombreSaisie*3 + 1;
+        }
+        if(nombreSaisie > valeurMaximale) {
+            valeurMaximale = nombreSaisie;
+        }
+        printf("étape %d : %d\n", nombreEtape++, nombreSaisie);
+    }
+    
+    printf("résultat final : %d\n", nombreSaisie);
+    printf("valeur maximale : %d", valeurMaximale);
+}

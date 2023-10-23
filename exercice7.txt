@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+
+int i, result, table;
+
+int main()
+{
+    printf("Quel table de multiplication souhaitez-vous ? (de 1 à 9)\n");
+    scanf("%d", &table);
+    
+    while(table < 1 || table > 9) {
+        printf("De 1 à 9 uniquement\n");
+        scanf("%d", &table);
+    }
+    
+    for(i = 1; i<=10; i++) {
+        result= i*table;
+        printf("%d * %d = %d\n", i, table, result);
+    }
+}

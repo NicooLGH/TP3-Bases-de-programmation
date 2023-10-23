@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int nombreAleatoire, nombreSaisie;
+
+int main()
+{
+    srand(time(NULL));
+    nombreAleatoire = rand()%100-1;
+    printf("Retrouvez la valeur comprise entre 1 et 100\n");
+    while (nombreSaisie!=nombreAleatoire) {
+        scanf("%d", &nombreSaisie);
+        if(nombreSaisie<nombreAleatoire) {
+            printf("Trop petit !");
+        } else if (nombreSaisie>nombreAleatoire) {
+            printf("Trop grand !");
+        } 
+    }
+    printf("C'est gagné !");
+}

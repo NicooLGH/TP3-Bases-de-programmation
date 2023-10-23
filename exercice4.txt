@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+
+int nombre = 1;
+
+int main()
+{
+    printf("Veuillez saisir un nombre entier naturel (entre 14 et 123)\n");
+    scanf("%d", &nombre);
+    while (nombre <14 || nombre > 123) {
+        printf("La valeur saisie n'est pas dans cet intervalle, resaisissez un entier\n");
+        scanf("%d", &nombre);
+    }
+    printf("La valeur %d est bien dans cet intervalle", nombre);
+}
